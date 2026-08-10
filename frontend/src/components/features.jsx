@@ -1,32 +1,45 @@
 import React from 'react'
 
-
 function Features() {
+  const featureItems = [
+    {
+      title: 'AI-Powered Optimization',
+      description: 'Smart crop allocation uses your land shape, climate, and soil data to suggest the highest-value crop mix for maximum productivity.',
+    },
+    {
+      title: 'Geospatial Precision',
+      description: 'Accurate location-aware recommendations mean your farm plan reflects real-world soil and regional conditions.',
+    },
+    {
+      title: 'Intelligent Explanations',
+      description: 'Understand each recommendation with clear reasoning from the AI, tailored to your plot and farming goals.',
+    },
+  ];
+
   return (
-    <div className='pb-18'>
-        <p className='text-5xl pb-7 px-8 font-medium'>  Features </p>
-        <div className='px-8 py-6 flex justify-around gap-8'>
-            <div class="basis-1/3 bg-green-100 px-5 py-6 rounded-3xl">
-                <div> 
-                    <p class="text-2xl font-medium pb-3"> AI-Powered Optimization </p>
-                    <p> Our sophisticated AI algorithms analyze your plot area and location-specific agricultural characteristics to generate the most efficient crop allocation strategies. </p>
-                </div>
-            </div>
-            <div class="basis-1/3 bg-green-100 px-8 py-6 rounded-3xl">
-                <div> 
-                    <p class="text-2xl font-medium pb-3"> Geospatial Precision </p>
-                    <p> We integrate advanced geospatial analysis to understand your land's unique properties, ensuring area-specific crop distribution for optimal resource use. </p>
-                </div>
-            </div>
-            <div class="basis-1/3 bg-green-100 px-8 py-6 rounded-3xl">
-                <div> 
-                    <p class="text-2xl font-medium pb-3"> Intelligent Explanations </p>
-                    <p> Our integrated Large Language Model provides detailed explanations for each crop allocation decision, outlining the environmental factors and user preferences considered. </p>
-                </div>
-            </div>
-           
+    <section id="features" className="section-wrapper py-16">
+      <div className="mx-auto max-w-7xl px-6 sm:px-10">
+        <div className="mb-10 max-w-3xl">
+          <p className="section-label">Features</p>
+          <h2 className="section-heading">Everything you need for better farm planning</h2>
+          <p className="section-copy">
+            CultivAIte brings together mapping, localized analytics, and farmer-friendly recommendations so you can plan with confidence.
+          </p>
         </div>
-    </div>
+
+        <div className="grid gap-6 md:grid-cols-3">
+          {featureItems.map((feature) => (
+            <div key={feature.title} className="feature-card rounded-[28px] border border-slate-200/80 bg-white/90 p-8 shadow-[0_16px_50px_rgba(15,23,42,0.05)]">
+              <div className="mb-4 inline-flex items-center justify-center rounded-full bg-emerald-50 px-4 py-2 text-sm font-semibold text-emerald-700">
+                ✓
+              </div>
+              <h3 className="mb-4 text-2xl font-semibold text-slate-900">{feature.title}</h3>
+              <p className="text-sm leading-7 text-slate-600">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   )
 }
 

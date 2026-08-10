@@ -1,23 +1,28 @@
 import React from 'react'
-import image from '../assets/poly.jpg';
+import image from '../assets/poly.jpg'
 
 function About() {
   return (
-    <div className='py-12'>
-        <p className='text-5xl pb-7 px-8 font-medium'>   </p>
-        <div className='bg-orange-100 px-3 py-6 flex justify-around'>
-            <div class="basis-1/2 self-center pl-15" >
-                <img className='h-90 w-130 rounded-4xl' src={image} alt="map" />
-            </div>
-            <div class="basis-1/2 self-center text-md pr-25">
-                <p class="text-2xl font-bold pb-4"> About CultivAIte </p>
-                <hr />
-                <p class="p-3"> At CultivAIte, we are passionate about empowering farmers with intelligent tools to make informed decisions. Leveraging the power of Artificial Intelligence, advanced geospatial analysis, and machine learning, we provide optimized crop allocation recommendations tailored to your specific land and environmental conditions. </p>
-                <p class="p-3"> Our mission is to promote efficient resource utilization, enhance crop yields, and contribute to sustainable agricultural practices. We understand the complexities of farming and strive to simplify the decision-making process by providing clear, data-driven insights and understandable explanations for our recommendations.</p>
-              
-            </div>
+    <section id="about" className="section-wrapper py-16">
+      <div className="mx-auto max-w-7xl px-6 sm:px-10">
+        <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+          <div>
+            <p className="section-label">About CultivAIte</p>
+            <h2 className="section-heading">Bringing intelligent farming tools to every field</h2>
+            <p className="section-copy max-w-2xl">
+              CultivAIte is designed for farmers and agronomists who want actionable, data-driven crop recommendations. We combine artificial intelligence, geospatial analysis, and clear local insights so your farm plan reflects both your goals and your land's real characteristics.
+            </p>
+            <p className="mt-6 section-copy max-w-2xl">
+              Our mission is to simplify sustainable agriculture with tools that help you maximize yield, optimize resources, and choose the right crops for your soil and climate.
+            </p>
+          </div>
+
+          <div className="rounded-[32px] bg-slate-950/10 p-4 shadow-[0_25px_70px_rgba(15,23,42,0.08)]">
+            <img className="h-full w-full rounded-[28px] object-cover" src={image} alt="CultivAIte overview" />
+          </div>
         </div>
-    </div>
+      </div>
+    </section>
   )
 }
 
