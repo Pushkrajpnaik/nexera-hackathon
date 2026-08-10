@@ -51,7 +51,7 @@ def get_location():
     }
 
     ret = jsonify(ret)
-    ret.headers.add('Access-Control-Allow-Origin', '*')
+    ret.headers.add('Access-Control-Allow-Origin', '*') # ensure any CORS
 
     return ret
 
